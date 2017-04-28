@@ -1,0 +1,8 @@
+# Mac
+.DS_Store
+
+# Vim
+*.swp
+
+# NPM
+node_modules/
