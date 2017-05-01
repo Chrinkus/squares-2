@@ -1,3 +1,5 @@
+const game = require("./game");
+
 (function() {
     "use strict";
 
@@ -6,6 +8,9 @@
           cWidth = canvas.width,
           cHeight = canvas.height,
           ctx = canvas.getContext("2d");
+
+    // Perm
+    game.init();
 
     function main(tStamp) {
         window.requestAnimationFrame(main);
@@ -24,6 +29,11 @@
         ctx.fillStyle = "black";
         ctx.textAlign = "center";
         ctx.fillText("SQUARES 2 | CIVIL WAR", cWidth / 2, cHeight / 3);
+
+        // Perm
+        game.draw();
+
+        game.update();
     }
     main();
 }());
